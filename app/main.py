@@ -47,4 +47,3 @@ class CarWashStation:
             (self.average_rating * (self.count_of_ratings - 1)
              + rating) / self.count_of_ratings, 1
         )
-
