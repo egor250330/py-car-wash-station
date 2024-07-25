@@ -2,11 +2,16 @@ from typing import List
 
 
 class Car:
-    def __init__(self, comfort_class: int, clean_mark: int, brand: str) -> None:
+    def __init__(
+        self,
+        comfort_class: int,
+        clean_mark: int,
+        brand: str
+    ) -> None:
         if not (1 <= comfort_class <= 7):
-            raise ValueError("Comfort class must be between 1 and 7")
+            raise ValueError("Comfort class between 1 and 7")
         if not (1 <= clean_mark <= 10):
-            raise ValueError("Clean mark must be between 1 and 10")
+            raise ValueError("Clean mark between 1 and 10")
 
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
@@ -22,11 +27,11 @@ class CarWashStation:
             count_of_ratings: int
     ) -> None:
         if not (1.0 <= distance_from_city_center <= 10.0):
-            raise ValueError("Distance must be between 1.0 and 10.0")
+            raise ValueError("Distance between 1.0 and 10.0")
         if not (1 <= clean_power <= 10):
-            raise ValueError("Clean power must be between 1 and 10")
+            raise ValueError("Clean power between 1 and 10")
         if not (1.0 <= average_rating <= 5.0):
-            raise ValueError("Average rating must be between 1.0 and 5.0")
+            raise ValueError("Average rating between 1.0 and 5.0")
         self.distance_from_city_center = distance_from_city_center
         self.clean_power = clean_power
         self.average_rating = average_rating
